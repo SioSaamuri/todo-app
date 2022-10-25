@@ -35,3 +35,32 @@
   width: auto;
   opacity: 0.9;
 }
+
+.add-task-container {
+  position: absolute;
+  top: 108px;
+  left: 24px;
+  width: 327px;
+  height: 48px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 14px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: rgba(148, 149, 165, 1) solid 1px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+#task-add-input {
+  font-size: 14px;
+  border: none;
+  background: none;
+}
