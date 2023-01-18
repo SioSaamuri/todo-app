@@ -14,6 +14,7 @@ const allBtn = document.getElementById("info-all");
 const completedbtn = document.getElementById("info-completed");
 const moonBtn = document.getElementById("moon");
 const sunBtn = document.getElementById("sun");
+const cssFile = document.getElementById("css-file");
 
 //thats a counter variable for items left in the list
 let items = 0;
@@ -29,7 +30,7 @@ clearBtn.addEventListener("click", clearCompleted);
 activeBtn.addEventListener("click", showActive);
 allBtn.addEventListener("click", showAll);
 completedbtn.addEventListener("click", showCompleted);
-sunBtn.addEventListener("click", function () {});
+sunBtn.addEventListener("click", lightMode);
 moonBtn.addEventListener("click", darkMode);
 
 // Function which creates new HTML element and displays it when enter key is  clicked
@@ -155,4 +156,16 @@ function showAll() {
     completedbtn.classList.remove("active");
     activeBtn.classList.remove("active");
   }
+}
+
+function darkMode() {
+  cssFile.setAttribute("href", "darkmode.css");
+  moonBtn.classList.add("hidden");
+  sunBtn.classList.remove("hidden");
+}
+
+function lightMode() {
+  cssFile.setAttribute("href", "lightmode.css");
+  moonBtn.classList.remove("hidden");
+  sunBtn.classList.add("hidden");
 }
