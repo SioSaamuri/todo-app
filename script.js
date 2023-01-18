@@ -9,6 +9,11 @@ const taskUl = document.querySelector("#task-container");
 const check = document.getElementById("submit");
 const circles = document.querySelectorAll(".circle");
 const clearBtn = document.getElementById("clear-completed-btn");
+const activeBtn = document.getElementById("info-active");
+const allBtn = document.getElementById("info-all");
+const completedbtn = document.getElementById("info-completed");
+const moonBtn = document.getElementById("moon");
+const sunBtn = document.getElementById("sun");
 
 //thats a counter variable for items left in the list
 let items = 0;
@@ -21,6 +26,11 @@ taskUl.addEventListener("click", removeTask);
 taskUl.addEventListener("click", checkCircle);
 // it listens clear completed btn and clears completed tasks from list
 clearBtn.addEventListener("click", clearCompleted);
+activeBtn.addEventListener("click", showActive);
+allBtn.addEventListener("click", showAll);
+completedbtn.addEventListener("click", showCompleted);
+sunBtn.addEventListener("click", function () {});
+moonBtn.addEventListener("click", darkMode);
 
 // Function which creates new HTML element and displays it when enter key is  clicked
 function addNewTask(event) {
@@ -96,5 +106,53 @@ function clearCompleted() {
       x.parentNode.remove();
       updateItemsMinus();
     }
+  }
+}
+
+function showActive() {
+  showAll();
+  let tasks = document.querySelectorAll(".circle");
+  for (let x of tasks) {
+    if (x.classList.contains("checked-circle")) {
+      x.parentNode.style.display = "none";
+    }
+  }
+  if (activeBtn.classList.contains("active")) {
+    activeBtn.classList.remove("active");
+  } else {
+    activeBtn.classList.add("active");
+    allBtn.classList.remove("active");
+    completedbtn.classList.remove("active");
+  }
+}
+
+function showCompleted() {
+  showAll();
+  let tasks = document.querySelectorAll(".circle");
+  for (let x of tasks) {
+    if (!x.classList.contains("checked-circle")) {
+      x.parentNode.style.display = "none";
+    }
+  }
+  if (completedbtn.classList.contains("active")) {
+    completedbtn.classList.remove("active");
+  } else {
+    activeBtn.classList.remove("active");
+    allBtn.classList.remove("active");
+    completedbtn.classList.add("active");
+  }
+}
+
+function showAll() {
+  let tasks = document.querySelectorAll(".circle");
+  for (let x of tasks) {
+    x.parentNode.style.display = "flex";
+  }
+  if (allBtn.classList.contains("active")) {
+    allBtn.classList.remove("active");
+  } else {
+    allBtn.classList.add("active");
+    completedbtn.classList.remove("active");
+    activeBtn.classList.remove("active");
   }
 }

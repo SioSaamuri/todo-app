@@ -26,9 +26,14 @@ body {
   color: hsl(0, 0%, 98%);
 }
 
-.moon-icon {
+.night-mode-icon {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 #background-img-mobile-dark {
@@ -54,7 +59,8 @@ body {
   border-radius: 5px;
 }
 
-.circle {
+.circle,
+.add-task-circle {
   width: 20px;
   height: 20px;
   border: rgba(148, 149, 165, 1) solid 1px;
@@ -158,4 +164,8 @@ button {
 
 #check-icon {
   margin: 25%;
+}
+
+.night-mode {
+  background: #171823;
 }
