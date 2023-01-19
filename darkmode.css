@@ -12,6 +12,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   display: flex;
   width: 375px;
   height: auto;
@@ -49,10 +52,12 @@ body {
 .add-task-container {
   position: absolute;
   top: 108px;
-  left: 24px;
+  left: 0;
+  right: 0;
+
+  margin: auto;
   width: 327px;
   height: 48px;
-  margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -172,4 +177,18 @@ button {
 
 .night-mode {
   background: #171823;
+}
+
+@media screen and (max-width: 1440px) {
+  #background-img-mobile-dark {
+    display: none;
+  }
+  #background-img-mobile-light {
+    width: auto;
+    opacity: 0.9;
+    display: none;
+  }
+  #background-img-desktop-dark {
+    display: none;
+  }
 }
