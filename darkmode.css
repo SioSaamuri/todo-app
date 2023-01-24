@@ -79,6 +79,8 @@ body {
   border: none;
   background: none;
   color: rgba(148, 149, 165, 1);
+  width: 95%;
+  outline: none;
 }
 
 .tasks-container {
@@ -166,7 +168,10 @@ button {
 .checked-circle {
   display: block;
   border: none;
-  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  background-image: url(images/icon-check.svg),
+    linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #check-icon {
@@ -177,7 +182,7 @@ button {
   background: #171823;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 376px) {
   #background-img-mobile-dark {
     display: none;
   }
@@ -187,6 +192,65 @@ button {
     display: none;
   }
   #background-img-desktop-dark {
+    display: flex;
+  }
+
+  #background-img-desktop-light {
     display: none;
+  }
+
+  #info-container-desktop {
+    display: flex;
+    gap: 19px;
+    /* display: none; */
+  }
+
+  .add-task-container {
+    width: 540px;
+  }
+
+  .tasks-container {
+    /* position: absolute;
+    top: 246px;
+    left: 0;
+    right: 0; */
+    margin: auto;
+    width: 540px;
+    transform: translateY(-50px);
+  }
+
+  button:hover {
+    color: rgba(227, 228, 241, 1);
+  }
+
+  button:focus {
+    color: rgba(58, 124, 253, 1);
+  }
+
+  #clear-completed-btn {
+    color: rgba(148, 149, 165, 1);
+  }
+
+  #clear-completed-btn:hover {
+    color: rgba(227, 228, 241, 1);
+  }
+
+  #clear-completed-btn:active {
+    color: rgba(58, 124, 253, 1);
+  }
+
+  #info-container {
+    display: none;
+  }
+
+  .logo-container {
+    width: 540px;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .bottom-text {
+    margin-top: 0;
   }
 }

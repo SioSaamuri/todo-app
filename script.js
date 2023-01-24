@@ -36,7 +36,9 @@ moonBtn.addEventListener("click", darkMode);
 function addNewTask(event) {
   if (taskInput.value != "" && event.key == "Enter") {
     let html = `<li class="task" id="task-${items}">
-    <div class="circle" id="circle${items}" value="${items}"></div>
+    <div class="circle" id="circle${items}" value="${items}">
+    <img scr="images/icon-check.svg" class="check-icon" id="check-icon">
+    </div>
     <p class="task-text" id="p-${items}" value="${items}">${taskInput.value}</p>
           <button>
             <img
