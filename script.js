@@ -18,7 +18,6 @@ const cssFile = document.getElementById("css-file");
 
 //thats a counter variable for items left in the list
 let items = 0;
-
 // that listens to enter key press and ads new task
 document.addEventListener("keypress", addNewTask);
 // that listens to click on the cross icon and removes specific task

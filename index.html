@@ -47,7 +47,7 @@
           id="background-img-desktop-dark"
         />
       </div>
-      <div class="logo-container">
+      <div class="logo-container" id="logo-container">
         <p class="logo-text">todo</p>
         <img
           src="images/icon-moon.svg"
@@ -74,10 +74,15 @@
       <ul class="tasks-container" id="task-container">
         <div class="tasks-footer">
           <button><p id="items-left"></p></button>
-          <button id="clear-completed-btn"><p>Clear Completed</p></button>
+          <div id="info-container-desktop" class="info-container-desktop">
+            <button class="info-button active" id="info-all">All</button
+            ><button class="info-button" id="info-active">Active</button
+            ><button class="info-button" id="info-completed">Completed</button>
+          </div>
+          <button id="clear-completed-btn">Clear Completed</button>
         </div>
       </ul>
-      <div class="info-container">
+      <div class="info-container" id="info-container">
         <button class="info-button active" id="info-all">All</button
         ><button class="info-button" id="info-active">Active</button
         ><button class="info-button" id="info-completed">Completed</button>

@@ -54,7 +54,6 @@ body {
   top: 108px;
   left: 0;
   right: 0;
-
   margin: auto;
   width: 327px;
   height: 48px;
@@ -142,10 +141,9 @@ button {
   cursor: pointer;
 }
 
-.info-container {
+.info-containe {
   width: 327px;
   background-color: rgba(37, 39, 61, 1);
-
   margin: 16px auto;
   padding: 20px 81px;
   display: flex;

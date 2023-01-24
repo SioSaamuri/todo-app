@@ -14,10 +14,10 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   width: 375px;
-  height: auto;
+  height: 150px;
   justify-content: space-between;
   padding: 48px 26px;
 }
@@ -45,6 +45,14 @@ body {
 #background-img-mobile-light {
   width: auto;
   opacity: 0.9;
+}
+
+#background-img-desktop-light {
+  display: none;
+}
+
+#background-img-desktop-dark {
+  display: none;
 }
 
 .add-task-container {
@@ -78,6 +86,8 @@ body {
   border: none;
   background: none;
   color: rgba(148, 149, 165, 1);
+  width: 95%;
+  outline: none;
 }
 
 .tasks-container {
@@ -139,7 +149,7 @@ button {
   cursor: pointer;
 }
 
-.info-container {
+#info-container {
   width: 327px;
   background-color: rgba(255, 255, 255, 1);
   margin: 16px auto;
@@ -148,11 +158,21 @@ button {
   justify-content: space-between;
   border-radius: 5px;
 }
+#info-container-desktop {
+  display: flex;
+  gap: 19px;
+  display: none;
+}
+
 .info-button {
   color: rgba(148, 149, 165, 1);
 }
 .active {
   color: rgba(58, 124, 253, 1);
+}
+
+#clear-completed-btn {
+  color: rgba(148, 149, 165, 1);
 }
 
 .bottom-text {
@@ -175,7 +195,7 @@ button {
   background: #171823;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 376px) {
   #background-img-mobile-dark {
     display: none;
   }
@@ -186,5 +206,56 @@ button {
   }
   #background-img-desktop-dark {
     display: none;
+  }
+
+  #background-img-desktop-light {
+    display: flex;
+  }
+
+  #info-container-desktop {
+    display: flex;
+    gap: 19px;
+    /* display: none; */
+  }
+
+  .add-task-container {
+    width: 540px;
+  }
+
+  .tasks-container {
+    /* position: absolute;
+    top: 246px;
+    left: 0;
+    right: 0; */
+    margin: auto;
+    width: 540px;
+    transform: translateY(-50px);
+  }
+
+  button:hover {
+    color: #171823;
+  }
+
+  button:focus {
+    color: rgba(58, 124, 253, 1);
+  }
+
+  #clear-completed-btn:hover {
+    color: #171823;
+  }
+
+  #clear-completed-btn:active {
+    color: rgba(58, 124, 253, 1);
+  }
+
+  #info-container {
+    display: none;
+  }
+
+  .logo-container {
+    width: 540px;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
