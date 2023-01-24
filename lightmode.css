@@ -213,6 +213,7 @@ button {
 
   #background-img-desktop-light {
     display: flex;
+    width: 100%;
   }
 
   #info-container-desktop {
